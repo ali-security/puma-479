@@ -35,7 +35,7 @@ For the purposes of Puma provisioning, "CPU cores" means:
 
 Set your config with the following process:
 
-* Use cluster mode and set `workers :auto` (requires the `concurrent-ruby` gem) to match the number of CPU cores on the machine (minimum 2, otherwise use single mode!). If you can't add the gem, set the worker count manually to the available CPU cores.
+* Use cluster mode with `workers :auto` (requires the `concurrent-ruby` gem) or manually set the worker count to match the number of CPU cores on the machine (minimum 2, otherwise use single mode!).
 * Set the number of threads to desired concurrent requests/number of workers.
   Puma defaults to 5, and that's a decent number.
 
